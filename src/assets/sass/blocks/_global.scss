@@ -1,0 +1,102 @@
+body {
+  background: $color4;
+  background-position: top center;
+  @include ff1;
+  @include font($f16, $lh22, 400, $color1);
+}
+.mobile{
+  &__logo-link{
+    display: none;
+  }
+  &__logo {
+      max-width: 26rem;
+  }
+  &__title {
+    display: none;
+    text-align: center;
+    margin: 0 auto 2rem;
+    max-width: 59rem;
+    text-transform: uppercase;
+    color: $color2;
+    font-size: 2.4rem;
+    font-weight: 700;
+
+    span {
+      text-transform: none;
+      color: $color2;
+      font-size: 1.6rem;
+      font-weight: 400;
+    }
+  }
+}
+.page {
+  &__inner {
+    position: relative;
+    display: flex;
+    gap: 2rem;
+  }
+
+  &__global {
+    max-width: 75rem;
+    width: 100%;
+    margin: 0 auto;
+  }
+  &__card {
+    display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin-bottom: 2rem;
+  &:last-child{
+    margin-bottom: 0;
+  }
+  }
+  &__title {
+    font-size: 1.8rem;
+    font-weight: 500;
+    color: $color2;
+  }
+
+  &__subtitle {
+    font-weight: 700;
+    color: $color2;
+  }
+
+  &__text {
+    font-size: 1.4rem;
+    line-height: 1.8rem;
+
+    span {
+      display: block;
+    }
+  }
+
+  &__link {
+    // display: block;
+    padding: 0.5rem 0;
+    font-size: 1.6rem;
+    color: $color1;
+    text-decoration: underline;
+
+    transition: color .3s;
+
+    &:hover {
+      color: $color2;
+    }
+  }
+
+}
+
+.btn {
+  color: #fff;
+  background: $color2;
+}
+
+a {
+  color: $color1;
+}
+
+.container {
+  max-width: 142rem;
+  padding: 0 1rem;
+  margin: 0 auto;
+}

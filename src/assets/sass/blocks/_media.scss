@@ -1,0 +1,424 @@
+// 1170(slg) 992(lg) 768(md) 576(sm) 480(ssm) 320(xs)
+
+@include mq(_992) {
+
+  //992(lg)
+  .page__inner {
+    display: block;
+  }
+  .page__link {
+    padding: 1rem 0;
+    margin-bottom: 1rem;
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+  .wrapper {
+    ul,
+    ol {
+      padding-left: 3rem;
+    }
+  
+    ul li {
+      padding: 1rem 0;
+    }
+  
+    ol li {
+      padding: 1rem 0;
+    }
+  
+  }
+
+  .header {
+
+    &__main {
+      flex-direction: column;
+      text-align: center;
+      align-items: center;
+    }
+  }
+
+  .main {
+    &__top {
+      gap: 1rem;
+    }
+
+  }
+
+  .menu {
+
+    &__list {
+
+      &-item {
+
+        &:active {}
+      }
+    }
+
+    &__sublist-item {
+      display: none;
+    }
+  }
+
+  .aside {
+    display: none;
+  }
+  .news{
+    &__card {
+
+      &-link {
+        &:hover {
+          color: inherit;
+          background: none;
+          .news__subtitle {
+            color: $color2;
+          }
+        }
+      }
+    }
+  }
+  .footer{
+    &__list{
+      &-item{
+        padding: 1rem;
+      }
+      &-link {
+        &:hover {
+          padding-bottom: 0;
+          border-bottom: none;
+        }
+      }
+    }
+  }
+}
+
+@include mq(_768) {
+  //768(md)
+
+  .mobile {
+    &__logo-link {
+      display: block;
+      text-align: center;
+      margin: 1rem 0;
+    }
+    &__title {
+      display: block;
+      font-size: 2rem;
+    }
+  }
+  iframe {
+    width: 100%;
+  
+    &:hover {
+      transform: none;
+    }
+  }
+  .page{
+
+    &__title {
+      font-size: 2.4rem;
+      text-align: center;
+      margin-bottom: 1rem;
+    }
+    &__text {
+      font-size: 1.8rem;
+    line-height: 2.4rem;
+    }
+  }
+
+  .breadcrumb {
+    display: none;
+  }
+
+  .image, .manufacture, .projects, .product{
+  &__gallery {
+    grid-template-columns: none;
+
+    &-item {
+      &:hover {
+        transform: none;
+      }
+    }
+  }
+  &__img {
+    display: block;
+    margin: 0 auto;
+    width: 100%;
+    box-shadow: 0px 4px 7px 0px rgba(0, 0, 0, .2);
+    border-radius: 1rem;
+  }
+}
+
+  .up {
+    display: none;
+  }
+
+  .header {
+    display: none;
+
+    .header__lang {
+      display: none;
+    }
+  }
+
+  .hero {
+
+    &__inner {
+      padding: 1rem 0 10rem;
+    }
+
+    &__lang {
+      display: none;
+
+      &-mobile {
+        // display: block;
+      }
+    }
+
+    &__menu-mobile {
+      display: block;
+      // width: 100%;
+    }
+
+    &__photo {
+      width: 100%;
+      min-height: 39rem;
+      background: url(/../assets/img/photo.jpg) no-repeat;
+      background-position: 60% 40%;
+      background-size: 250%;
+    }
+  }
+
+  .hero__menu {
+    order: 1;
+
+    &-btn {
+      display: block;
+      background: transparent;
+      position: fixed;
+      top: 2rem;
+      right: 1rem;
+      // transform: translateY(-50%);
+      z-index: 2;
+
+      &--active {
+        opacity: 0.3;
+      }
+
+      &-line {
+        display: block;
+        width: 100%;
+        height: .2rem;
+        background: rgb(0, 0, 0);
+        position: absolute;
+        left: 0;
+
+        transition: all .3s linear;
+
+        &--first {
+          top: 0;
+        }
+
+        &--second,
+        &--third {
+          top: 50%;
+          transform: translateY(-50%)
+        }
+
+        &--fourth {
+          bottom: 0;
+          color: rgb(0, 0, 0);
+
+        }
+      }
+
+      &--active &-line--first,
+      &--active &-line--fourth {
+        opacity: 0;
+
+      }
+
+      &--active &-line--second {
+        transform: translateY(-50%) rotate(45deg);
+      }
+
+      &--active &-line--third {
+        transform: translateY(-50%) rotate(-45deg);
+      }
+    }
+
+    &-list {
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: center;
+      height: 100vh;
+      position: fixed;
+      text-align: center;
+      opacity: 0.95;
+      top: 0;
+      left: 0;
+      right: 0;
+      padding: 2rem 1rem;
+
+      background-color: #ffffff;
+      transform: translatex(80rem);
+      transition: all .5s;
+
+      &.hero__menu-list--active {
+        z-index: 1;
+        transform: translateY(0);
+      }
+
+      &-link {
+        display: block;
+
+        font-size: 1.8rem;
+        line-height: 2.8rem;
+        padding: 2rem 0;
+      }
+    }
+
+    .header__logo-link {
+      display: block;
+      margin: 0 auto;
+    }
+  }
+
+  .certificates {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    &__img{
+      &-box {
+
+        &:hover{
+          transform: none;
+        }
+      }
+    }
+  }
+  .main {
+
+    &__top {
+      // flex-direction: column;
+      text-align: center;
+    }
+
+    &__list {
+      padding: 0 .5rem;
+
+      &-title {
+        font-size: 1.6rem;
+      }
+
+      &-item {}
+
+      &-link {
+        padding: .5rem 0;
+        font-size: 1.8rem;
+      }
+
+    }
+  }
+
+  .news {
+    &__link {
+
+      &:hover {
+        padding: 0;
+        border: none;
+      }
+    }
+  }
+}
+
+@include mq(_576) {
+  // 576(sm)
+
+  .mobile {
+    &__title {
+      font-size: 1.8rem;
+      span{
+      display: block;
+        font-size: 1.4rem;
+      }
+    }
+  }
+
+  .main {
+
+    &__preview {
+      text-align: center;
+    }
+  }
+
+  .footer{
+
+    &__list{
+      flex-direction: column;
+      gap: 0;
+      &-item{
+        padding: 1rem;
+      }
+      &-link {
+        font-size: 1.6rem;
+        &:hover {
+          padding-bottom: 0;
+          border-bottom: none;
+        }
+      }
+    }
+    &__info {
+      text-align: center;
+    }
+  }
+}
+
+@include mq(_480) {
+  // 480(ssm)
+
+  .main{
+
+    &__list{
+      margin-bottom: 2rem;
+      &-title{
+        margin-bottom: 1rem;
+      }
+    }
+    &__top {
+      display: block;
+      text-align: left;
+    }
+  }
+
+  .hero {
+    &__top {
+      display: block;
+    }
+
+    &__title {
+      margin-bottom: 1rem;
+    }
+
+    &__text {
+      text-align: left;
+    }
+
+    &__photo {
+      background-size: 400%;
+    }
+  }
+
+}
+
+
+
+@include mq(_320) {
+  // 320(xs)
+
+  .hero {
+    &__menu-mobile {
+      order: 2;
+    }
+  }
+}
