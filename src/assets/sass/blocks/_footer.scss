@@ -1,0 +1,57 @@
+.footer {
+  margin-bottom: 3.4rem;
+
+  &__inner {
+    display: flex;
+    justify-content: space-around;
+  }
+
+  &__menu {}
+
+  &__title {
+    text-transform: uppercase;
+    @include font(1.6rem, 2.4rem, 400, $color1);
+    letter-spacing: 0.04em;
+    margin-bottom: 1.6rem;
+
+  }
+
+  &__list {
+
+    &-item {
+
+      &+& {
+        margin-top: 0.8rem;
+      }
+    }
+
+    &-link {
+      @include font(1.4rem, 2rem, 400, $color1);
+    }
+  }
+
+  &__email {
+    display: flex;
+    flex-direction: column;
+    margin-top: 3.3rem;
+
+    &--input {
+      padding: 1.6rem 1.2rem;
+      border-bottom: 1px solid #C4C4C4;
+      margin-bottom: 3.5rem;
+
+      &::placeholder {
+        @include font(1.4rem, 2rem, 400, $color2);
+      }
+    }
+  }
+
+  &__btn {
+    @include font(1.4rem, 2rem, 400, $color1);
+    border: 1px solid $color1;
+    background: transparent;
+    margin-left: auto;
+    max-width: 15rem;
+    padding: 0.8rem 2.8rem;
+  }
+}

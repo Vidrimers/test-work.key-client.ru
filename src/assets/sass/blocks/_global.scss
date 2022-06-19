@@ -1,8 +1,7 @@
 body {
-  background: $color4;
-  background-position: top center;
+  background: $color3;
   @include ff1;
-  @include font($f16, $lh22, 400, $color1);
+  @include font(1.6rem, 2.2rem, 400, $color1);
 }
 .mobile{
   &__logo-link{
@@ -28,11 +27,6 @@ body {
       font-weight: 400;
     }
   }
-}
-
-.btn {
-  color: #fff;
-  background: $color2;
 }
 
 a {
